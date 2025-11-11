@@ -6,8 +6,8 @@ InputID=enhancer_activity_model_dataset
 for fold in ${fold_list//,/ }; do
   for tissue in ${tissue_list//,/ }; do
     for rep in 1 2; do
-		arch=result/model/accessibility_model/${tissue}/results_${fold}_${tissue}_DeepSTARR_rep${rep}
-		OUTDIR=result/model/enhancer_activity_model/${tissue}/results_${fold}_${tissue}_DeepSTARR_rep${rep}
+		arch=accessibility_model/${tissue}/results_${fold}_${tissue}_DeepSTARR_rep${rep}
+		OUTDIR=enhancer_activity_model/${tissue}/results_${fold}_${tissue}_DeepSTARR_rep${rep}
 		mkdir ${OUTDIR}
 		mkdir -p ${OUTDIR}/log_training
 		JOB_ID=VISTA_${tissue}
