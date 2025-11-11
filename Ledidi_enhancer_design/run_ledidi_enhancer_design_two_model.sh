@@ -12,8 +12,8 @@ act="14"
 lamda="0.1"
 
 for i in ${loop//,/ }; do
-enhancer=enhancer_activity_models/${tissue}/results_${fold}_${tissue}_DeepSTARR2_rep${rep}/Model
-access=accessibility_models/${tissue}/results_${fold}_${tissue}_DeepSTARR2_rep${rep}/Model
+enhancer=enhancer_activity_models/${tissue}/results_${fold}_${tissue}_DeepSTARR_rep${rep}/Model
+access=accessibility_models/${tissue}/results_${fold}_${tissue}_DeepSTARR_rep${rep}/Model
 OUTDIR=ledidi_design/${tissue}/${i}
 
 mkdir ${OUTDIR}
