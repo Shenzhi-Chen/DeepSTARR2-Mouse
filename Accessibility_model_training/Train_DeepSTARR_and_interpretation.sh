@@ -16,16 +16,16 @@ Script_dir=Accessibility_models/
 
 if [ $# -eq 0 ]; then
   echo >&2 "
-$(basename $0) - Train DeepSTARR single task model + contribution scores + TF-Modisco
+$(basename $0) - Train DeepSTARR single task model + contribution scores 
 
-USAGE: $(basename $0) -d <fold file name> -a <architecture> -v <cell type output> -o <results output path> -p <peaks to generate nucl contr scores> -c <1/0 run nucl contr scores and TF-Modisco> -t <tissue for training> -f <fold number>
+USAGE: $(basename $0) -d <fold file name> -a <architecture> -v <cell type output> -o <results output path> -p <peaks to generate nucl contr scores> -c <1/0 run nucl contr scores> -t <tissue for training> -f <fold number>
 
  -d     Input ID to get fasta file and sequences txt file         [ required ]
  -a     Model architecture                                        [ required ]
  -v     Variable to predict                                       [ required ]
  -o     Output directory name                                     [ required ]
  -p     Peaks to compute nucl contr scores                       [ required ]
- -c     Run nucl contr scores and TF-Modisco(0/1)                 [ required ]
+ -c     Run nucl contr scores (0/1)                 [ required ]
  -t     tissue for training                                      [ required ]
  -f     fold number                                             [ required ]
  
@@ -59,7 +59,7 @@ echo Architecture: ${arch}
 echo variable_output: ${variable_output}
 echo Output director: ${OUTDIR}
 echo ContrScores_peaks: ${ContrScores_peaks}
-echo ContrScores TF-Modisco: ${ContrScores}
+echo ContrScores: ${ContrScores}
 echo tissue: ${tissue}
 echo fold: ${fold}
 echo
