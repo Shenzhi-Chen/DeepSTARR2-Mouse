@@ -185,7 +185,7 @@ def positive_predictive_value_at_cutoff(cutoff=0.5):
 
 print("\nCreate model\n")
 
-params_DeepSTARR2 = {'batch_size': 128,
+params_DeepSTARR = {'batch_size': 128,
           'epochs': 100,
           'early_stop': 10,
           'kernel_size1': 7,
@@ -205,7 +205,7 @@ params_DeepSTARR2 = {'batch_size': 128,
           'pad':'same',
           'act':'relu'}
 
-def DeepSTARR2(params=params_DeepSTARR2):
+def DeepSTARR(params=params_DeepSTARR):
     
     dropout_prob = params['dropout_prob']
     
@@ -253,8 +253,8 @@ def DeepSTARR2(params=params_DeepSTARR2):
 
     return model, params
 
-print(DeepSTARR2()[0].summary())
-print(DeepSTARR2()[1]) # dictionary
+print(DeepSTARR()[0].summary())
+print(DeepSTARR()[1]) # dictionary
 
 #########
 ### Model training
@@ -275,7 +275,7 @@ def train(selected_model, X_train, Y_train, X_valid, Y_valid, params):
 
 
 # Model fit
-main_model, main_params = DeepSTARR2()
+main_model, main_params = DeepSTARR()
 main_model, my_history = train(main_model, X_train, Y_train, X_valid, Y_valid, main_params)
 
 
