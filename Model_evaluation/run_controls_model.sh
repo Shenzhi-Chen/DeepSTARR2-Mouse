@@ -1,5 +1,5 @@
 #!/bin/bash
-# directly training activity model (work as conrtol)
+# (i) directly training activity model (work as conrtol)
 OUTDIR=result/model/enhancer_activity_model/${tissue}/results_${fold}_${tissue}_DeepSTARR_rep${rep}_init_random
 mkdir -p ${OUTDIR}
 mkdir -p ${OUTDIR}/log_training
@@ -30,3 +30,17 @@ bin/my_bsub_gridengine -n ${JOB_ID} \
                         -o ${OUTDIR}"   
 
 
+# (ii) predict enhancer activity by accessibility model
+pred_script=${script_path}/Predict_CNN_model_from_fasta.py
+model=${OUTDIR}/Model
+mkdir -p ${OUTDIR}/log_predictions
+scripts/functions/my_bsub_gridengine -n act_predict_random_${ID} \
+                                     -o ${OUTDIR}/log_predictions \
+                                     -m 40 \
+                                     -T '4:00:00' \
+                                     "${pred_script} \
+                                     -s db/fasta/testing_dataset/random_sequences_600k.fasta \
+                                     -m ${model} \
+                                     -o ${OUTDIR}"
+
+									 
