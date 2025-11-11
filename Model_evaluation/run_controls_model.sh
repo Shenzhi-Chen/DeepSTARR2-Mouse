@@ -19,7 +19,7 @@ ID_main=$(paste ${OUTDIR}/log_training/msg.model_training.tmp | grep Submitted |
 # Predict enhancer test dataset
 mkdir -p ${OUTDIR}/log_predictions
 JOB_ID=act_VISTA_pred_${ID}_init_random
-bins/my_bsub_gridengine -n ${JOB_ID} \
+bin/my_bsub_gridengine -n ${JOB_ID} \
                         -o ${OUTDIR}/log_predictions \
                         -m 80 \
                         -d "${ID_main}" \
