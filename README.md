@@ -124,7 +124,7 @@ ledidi_design/heart/results_fold01_heart_DeepSTARR_rep1/1
 To predict the accessibility levels or enhancer activity score in a given tissue of the mouse embryo for new DNA sequences, please run:
 ```
 # Clone this repository
-git https://github.com/Shenzhi-Chen/DeepSTARR-Mouse.git
+git clone https://github.com/Shenzhi-Chen/DeepSTARR-Mouse.git
 cd DeepSTARR-Mouse
 
 # download a Sequence-to-accessibility or Sequence-to-activity model from Hugging Face https://huggingface.co/Shenzhi-Chen/DeepSTARR-Mouse
@@ -157,7 +157,7 @@ We recommend using the models from the different folds and average the predictio
 To design your own tissue-specific enhancers for heart, limb, or CNS in the mouse embryo, follow the steps below.
 ```
 # Clone this repository
-git https://github.com/Shenzhi-Chen/DeepSTARR-Mouse.git
+git clone https://github.com/Shenzhi-Chen/DeepSTARR-Mouse.git
 cd DeepSTARR-Mouse
 
 # download both Sequence-to-accessibility and Sequence-to-activity model for your favourite tissue from Hugging Face https://huggingface.co/Shenzhi-Chen/DeepSTARR-Mouse
