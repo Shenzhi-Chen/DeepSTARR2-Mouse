@@ -5,8 +5,7 @@ script_path=accessibility_models
 arch=DeepSTARR2
 InputID=accessibility_model_dataset
 OUTDIR=accessibility_model
-
-TFModisco=1
+Contribution_score=1 #if compute nucleotide contribution score
 
 for fold in ${fold_list//,/ }; do
     for tissue in ${tissue_list//,/ }; do
@@ -18,7 +17,7 @@ for fold in ${fold_list//,/ }; do
                 -v score \
     		  	-o ${OUTDIR}/${tissue}/results_${fold}_${tissue}_${arch}_rep${rep} \
                 -p ${InputID}/${tissue}/${fold}_sequences_test.fa \
-    		  	-c $TFModisco \
+    		  	-c $Contribution_score \
                 -t $tissue \
                 -f $fold
         done
