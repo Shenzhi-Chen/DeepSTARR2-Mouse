@@ -104,4 +104,4 @@ print("\nSaving file ...\n")
 import os.path
 model_ID_out=os.path.basename(model_ID)
 new_seq_out=os.path.basename(new_seq)
-out_prediction.to_csv(outdir + "/" + new_seq_out + "_predictions_enhancer_" + model_ID_out + ".txt", sep="\t", index=False)
+out_prediction.to_csv(outdir + "/" + new_seq_out + "_predictions_" + model_ID_out + ".txt", sep="\t", index=False)
