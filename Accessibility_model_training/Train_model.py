@@ -98,7 +98,7 @@ def prepare_input(fold, set, output):
     X = np.nan_to_num(seq_matrix_A) # Replace NaN with zero and infinity with large finite numbers
     X_reshaped = X.reshape((X.shape[0], X.shape[1], X.shape[2]))
 
-    Activity = pd.read_table(fold + "_sequences_activity_" + set + ".txt")
+    Activity = pd.read_table(fold + "_sequences_accessibility_" + set + ".txt")
     Y = Activity[output]
     label = Activity.iloc[:, 0]   
     print(set)
