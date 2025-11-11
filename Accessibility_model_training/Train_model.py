@@ -128,8 +128,8 @@ print("\nBuild model: " + architecture +"\n")
 sys.path.append('Accessibility_models')
 from Final_model_architectures import *
 
-if architecture == 'DeepSTARR2':
-   get_model=DeepSTARR2
+if architecture == 'DeepSTARR':
+   get_model=DeepSTARR
 
 get_model()[0].summary()
 get_model()[1] # dictionary
