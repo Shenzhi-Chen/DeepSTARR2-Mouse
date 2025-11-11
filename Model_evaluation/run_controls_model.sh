@@ -31,9 +31,9 @@ bin/my_bsub_gridengine -n ${JOB_ID} \
 
 
 # (ii) predict enhancer activity by accessibility model
+OUTDIR=access_activity_model/${tissue}/results_${fold}_${tissue}_DeepSTARR_rep${rep}
 pred_script=${script_path}/Predict_CNN_model_from_fasta.py
 model=${OUTDIR}/Model
-mkdir -p ${OUTDIR}/log_predictions
 scripts/functions/my_bsub_gridengine -n act_predict_random_${ID} \
                                      -o ${OUTDIR}/log_predictions \
                                      -m 40 \
